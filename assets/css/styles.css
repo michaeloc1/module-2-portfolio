@@ -15,12 +15,13 @@ header{
     
 
 }
-h1{
+.header-h1{
 
     background-color: azure;
     border-radius: 10px;
     padding: 10px 15px 10px 25px;
     margin-left: 10px;
+    font-family: var(--body-font);
 }
 
 li{
@@ -42,6 +43,13 @@ img{
 }
 
 /* Bottom right text */
+
+.container {
+    position: relative;
+    text-align: center;
+   
+  }
+
 .bottom-right {
     position: absolute;
     bottom: 8px;
@@ -51,8 +59,40 @@ img{
 
   }
 
-  .container {
-    position: relative;
-    text-align: center;
-   
-  }
+
+  .section-body{
+
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  
+    
+    }
+    
+    .section-header{
+    
+    font-family: var(--text-font);
+    width:80px;
+    position: absolute;
+    text-align: right;
+    font-family: var(--body-font);
+    margin-top: auto;
+    
+    }
+    
+    .vert-line{
+        border-right: 4px solid #4b42f5;
+        height: 200px;
+        position: relative;
+        width:120px;
+     
+    }
+    
+    .main-text{
+        position: relative;
+        left: 150px;
+        bottom:200px;
+        width:90%;
+        font-family: var(--body-font);
+    }
