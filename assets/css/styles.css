@@ -2,6 +2,7 @@
 
     --body-font: cursive;
     --background-color: #2a348d;
+    --opacity: .5;
 }
 
 * {
@@ -12,7 +13,7 @@ body{
     margin:0;
     
 }
-
+/* format header and nav bar to show correctly */
 header{
     display: flex;
     flex-wrap: wrap;
@@ -22,6 +23,7 @@ header{
 
 
 }
+/* formats name, subtitle, and image text */
 .header-h1{
 
     background-color: azure;
@@ -30,32 +32,40 @@ header{
     margin-left: 10px;
     font-family: var(--body-font);
 }
+/*formats avatar which appears in navbar */
+.avatar{
+  height:100px;
+  width: 75px;
+}
 
+
+/* formats nav bar links */
 li{
 
     display: inline;
-    color:azure;
+   /* color:azure; */
     padding: 0 20px 0 20px;
     font-size: 15px;
-    font-family: cursive;
+    font-family: var(--body-font);
     font-size: 16px;
 }
+/*sets color of nav bar links */
 nav a{
 
     color:azure
 }
-
+/* makes text bolder in nav lins on mouse over */
 nav a:hover{
 
   font-weight: bolder;
 }
-
+/* image right under nav bar */
 img{
     width:100%;
     height: 300px;
 }
 
-/* Bottom right text */
+/* .container and .bottom-right needed to position text over image  on right hand side*/
 
 .container {
     position: relative;
@@ -63,10 +73,6 @@ img{
    
   }
 
-  .container:Hover{
-    opacity: .4;
-
-  }
 
 .bottom-right {
     position: absolute;
@@ -76,8 +82,8 @@ img{
     padding: 10px 15px 10px 25px;
 
   }
-
-  .about-me{
+  /* styles sections about-me, my-work, and footer */
+  .section-format{
     width: 90%;
     height: 100%;
     margin-left: auto;
@@ -87,19 +93,38 @@ img{
 
   }
 
-  .my-work{
+  /*.my-work{
     width: 90%;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
     
-  }
-
+  }*/
+  /* formats headers for about-me, my-work and footer*/
   .section-headers{
     font-family: var(--body-font);
+    font-size: 30px;
+  }
+/* container-work needed to position text over main img */
+  .container-work{
+    position: relative;
+  
+  }
+/* used to position text over lower left of main img  and sub work images*/
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    border-radius: 10px;
+    padding: 10px 15px 10px 25px;
+  
+  }
+/* change opacity on mouse over for main img and text */
+  .container-work:hover{
+    opacity: var(--opacity);
+    border: 5px solid;
 
   }
-
+/* format large my work image size and border */
   .main-img{
 
     height:600px;
@@ -114,6 +139,17 @@ img{
         justify-content: center;
 
     } */
+    /*formats the images and text that appear under the main work */
+    .sub-work{
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0;
+    
+  }
+/* container-sub-work needed to get text over smaller images.
+   Also sets width of container to 45% so images appear in 2 rows */
 
     .container-sub-work {
       position: relative;
@@ -121,21 +157,23 @@ img{
       width: 45%;
      
     }
-
+/* formats sub work images */
+    .sub-work-img{
+      width:100%;
+      height:200px;
+      margin: 10px 0px;
+      border: 2px solid;
+      min-width: 450px;
+  }
+/* highlights sub work images on mouseover. */
     .container-sub-work:hover{
 
-      opacity: .4;
+      opacity: var(--opacity);
     }
 
 
 
-    .bottom-left {
-      position: absolute;
-      bottom: 8px;
-      border-radius: 10px;
-      padding: 10px 15px 10px 25px;
-    
-    }
+ 
 
     /*.sub-work{
 
@@ -143,44 +181,35 @@ img{
 
     }*/
 
-    .sub-work-img{
-        width:100%;
-        height:200px;
-        margin: 10px 0px;
-        border: 2px solid;
-        min-width: 450px;
-    }
 
-    .sub-work{
 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 0;
-      
-    }
-    .bottom-left-sub {
+
+    /*.bottom-left-sub {
       position: absolute;
       bottom: 8px;
       border-radius: 10px;
       padding: 10px 15px 10px 25px;
-     }
+     }*/
 
-    .contact{
+   /* .contact{
 
      color:black;
-    }
-
+    }*/
+    /* formats ul so it formats on the webpage correctly */
     footer ul{
         list-style: none;
         margin: 0 2px;
         padding: 10px;
-        display: flex;
         justify-content: space-around;
         display: flex;
         flex-wrap: wrap;
+        color: black;
       }
- 
+      footer a{
+        color: black;
+      }
+
+    /* displays rows as columns on small screens */
       @media screen and (max-width: 768px) {
         .sub-work,
         footer ul
