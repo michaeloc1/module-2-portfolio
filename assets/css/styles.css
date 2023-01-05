@@ -11,6 +11,7 @@
 
 body{
     margin:0;
+    background-color: azure;
     
 }
 /* format header and nav bar to show correctly */
@@ -36,7 +37,10 @@ header{
 .avatar{
   height:100px;
   width: 75px;
-}
+  position: absolute;
+  bottom: 8px;
+  left: 300px;
+  }
 
 
 /* formats nav bar links */
@@ -153,8 +157,7 @@ img{
 
     .container-sub-work {
       position: relative;
-      text-align: center;
-      width: 45%;
+     /* width: 45%;*/
      
     }
 /* formats sub work images */
@@ -217,5 +220,9 @@ img{
           flex-direction: column;
           text-align: center;
          
+        }
+        .main-img{
+
+          max-height: 300px;
         }
       }
