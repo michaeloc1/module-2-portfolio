@@ -97,13 +97,6 @@ img{
 
   }
 
-  /*.my-work{
-    width: 90%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    
-  }*/
   /* formats headers for about-me, my-work and footer*/
   .section-headers{
     font-family: var(--body-font);
@@ -136,13 +129,6 @@ img{
     border: 2px solid;
     }
 
-
-
-    /*.center-img{
-        display: flex;
-        justify-content: center;
-
-    } */
     /*formats the images and text that appear under the main work */
     .sub-work{
 
@@ -150,7 +136,7 @@ img{
       flex-wrap: wrap;
       justify-content: space-between;
       margin: 0;
-    
+       
   }
 /* container-sub-work needed to get text over smaller images.
    Also sets width of container to 45% so images appear in 2 rows */
@@ -162,11 +148,11 @@ img{
     }
 /* formats sub work images */
     .sub-work-img{
-      width:100%;
-      height:200px;
+      width:600px;
+      height:300px;
       margin: 10px 0px;
       border: 2px solid;
-      min-width: 450px;
+      /*min-width: 450px;*/
   }
 /* highlights sub work images on mouseover. */
     .container-sub-work:hover{
@@ -174,30 +160,6 @@ img{
       opacity: var(--opacity);
     }
 
-
-
- 
-
-    /*.sub-work{
-
-        margin:10px;
-
-    }*/
-
-
-
-
-    /*.bottom-left-sub {
-      position: absolute;
-      bottom: 8px;
-      border-radius: 10px;
-      padding: 10px 15px 10px 25px;
-     }*/
-
-   /* .contact{
-
-     color:black;
-    }*/
     /* formats ul so it formats on the webpage correctly */
     footer ul{
         list-style: none;
@@ -213,16 +175,42 @@ img{
       }
 
     /* displays rows as columns on small screens */
+    @media screen and (max-width: 1360px) {
+      
+      .sub-work-img{
+        width: 500px;
+      }
+    }
+
+    @media screen and (max-width: 992px)
+    {
+      .main-img{
+        height: 450px;
+      }  
+ 
+      .sub-work-img{
+        width:400px;
+      }
+    }
+
       @media screen and (max-width: 768px) {
-        .sub-work,
-        footer ul
+        .sub-work
+       
         {
           flex-direction: column;
+                   
+        }
+        footer ul{
+          flex-direction: column;
           text-align: center;
-         
         }
         .main-img{
 
           max-height: 300px;
         }
+
+        .sub-work-img{
+          width:450px;
+        }
       }
+
