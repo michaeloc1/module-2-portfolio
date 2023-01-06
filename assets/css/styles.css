@@ -1,6 +1,6 @@
 :root{
 
-    --body-font: cursive;
+    --body-font: cursive, sans-serif;
     --background-color: #2a348d;
     --opacity: .5;
 }
@@ -12,7 +12,7 @@
 body{
     margin:0;
     background-color: azure;
-    
+
 }
 /* format header and nav bar to show correctly */
 header{
@@ -66,14 +66,14 @@ nav a:hover{
 /* image right under nav bar */
 img{
     width:100%;
-    height: 300px;
+    height: 400px;
 }
 
 /* .container and .bottom-right needed to position text over image  on right hand side*/
 
 .container {
     position: relative;
-    text-align: center;
+
    
   }
 
@@ -118,7 +118,7 @@ img{
 /* change opacity on mouse over for main img and text */
   .container-work:hover{
     opacity: var(--opacity);
-    border: 5px solid;
+    
 
   }
 /* format large my work image size and border */
@@ -143,12 +143,12 @@ img{
 
     .container-sub-work {
       position: relative;
-     /* width: 45%;*/
+      width: 45%;
      
     }
 /* formats sub work images */
     .sub-work-img{
-      width:600px;
+      /*width:600px;*/
       height:300px;
       margin: 10px 0px;
       border: 2px solid;
@@ -174,7 +174,7 @@ img{
         color: black;
       }
 
-    /* displays rows as columns on small screens */
+    /* change size of images as screen gets smaller also changes to flex column in sub work and footer*/
     @media screen and (max-width: 1360px) {
       
       .sub-work-img{
@@ -211,6 +211,9 @@ img{
 
         .sub-work-img{
           width:450px;
+        }
+        .banner-img{
+          height:200px;
         }
       }
 
