@@ -32,6 +32,8 @@ header{
     padding: 10px 15px 10px 25px;
     margin-left: 10px;
     font-family: var(--body-font);
+    color:black;
+    
 }
 /*formats avatar which appears in navbar */
 .avatar{
@@ -102,63 +104,91 @@ img{
     font-family: var(--body-font);
     font-size: 30px;
   }
-/* container-work needed to position text over main img */
-  .container-work{
-    position: relative;
-  
-  }
-/* used to position text over lower left of main img  and sub work images*/
-  .bottom-left {
-    position: absolute;
-    bottom: 8px;
-    border-radius: 10px;
-    padding: 10px 15px 10px 25px;
-  
-  }
-/* change opacity on mouse over for main img and text */
-  .container-work:hover{
-    opacity: var(--opacity);
-    
 
-  }
-/* format large my work image size and border */
-  .main-img{
-
-    height:600px;
-    width:100%;
-    border: 2px solid;
-    }
-
-    /*formats the images and text that appear under the main work */
-    .sub-work{
-
+    /***********************************************************************/
+    .container1 {
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
-      margin: 0;
-       
-  }
-/* container-sub-work needed to get text over smaller images.
-   Also sets width of container to 45% so images appear in 2 rows */
-
-    .container-sub-work {
-      position: relative;
-      width: 45%;
-     
+      flex-wrap: wrap;
+      padding: 10px;
+   
+      
+  
     }
-/* formats sub work images */
-    .sub-work-img{
-      /*width:600px;*/
-      height:300px;
-      margin: 10px 0px;
-      border: 2px solid;
-      /*min-width: 450px;*/
-  }
-/* highlights sub work images on mouseover. */
-    .container-sub-work:hover{
+    
+    .child {
+      display: inline-block;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 12px;
+      position:relative;
+      min-height: 300px;
+      background-repeat: no-repeat;
+      background-position: 0% 0%;
+      background-size: 100% 100%;
+   
+      
+   
+      }
+    
+    .child:first-child {
+      width: 100%;
+      background-image: url(../images/code-1076536__340.jpg);
+      height: 600px;
+      padding-bottom: 10px;
+ 
+      
+          
 
+    }
+    
+   .child:not(:first-child) {
+      flex: 1 1 40%;
+      height: 300px;
+   
+
+    }
+    .child:nth-child(2){
+      background-image: url(../images/computer-2788918_960_720.jpg);
+    }
+
+    .child:nth-child(3){
+      background-image: url(../images/programmer-7633812__340.webp);
+    }
+
+    .child:nth-child(4){
+      background-image: url(../images/istockphoto-537331500-170667a.jpg);
+    }
+
+    .child:nth-child(5){
+      background-image: url(../images/coding-courses-800x449\ \(1\).png);
+    }
+
+
+    .child:hover{
       opacity: var(--opacity);
     }
+    .header-h1-work{
+
+      background-color: azure;
+      border-radius: 10px;
+      padding: 10px 15px 10px 25px;
+      font-family: var(--body-font);
+      color:black;
+      display: inline-block;
+      margin: 0;
+      position: absolute;
+      bottom:10px;
+      left:10px;
+     }
+
+  .break{
+    display: block;
+    font-size: 15px;
+  }
+
+   
+    /***********************************************************************/
 
     /* formats ul so it formats on the webpage correctly */
     footer ul{
@@ -173,7 +203,10 @@ img{
       footer a{
         color: black;
       }
-
+      .break{
+        display: block;
+        font-size: 15px;
+      }
     /* change size of images as screen gets smaller also changes to flex column in sub work and footer*/
     @media screen and (max-width: 1360px) {
       
@@ -214,6 +247,13 @@ img{
         }
         .banner-img{
           height:200px;
+        }
+        .child{
+          max-height: 300px;
+        }
+        .container1{
+          flex-direction: column;
+         
         }
       }
 
