@@ -184,6 +184,7 @@ img{
       position: absolute;
       bottom:10px;
       left:10px;
+    
      }
      /*set up line break in image text*/
   .break{
@@ -238,5 +239,6 @@ img{
           flex-direction: column;
          
         }
+
       }
 
