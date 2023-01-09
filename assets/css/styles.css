@@ -28,7 +28,7 @@ header{
 .header-h1{
 
     background-color: azure;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 10px 15px 10px 25px;
     margin-left: 10px;
     font-family: var(--body-font);
@@ -106,7 +106,8 @@ img{
   }
 
     /***********************************************************************/
-    .container1 {
+    /*parent element set up flexbox*/
+    .container-work {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -115,10 +116,12 @@ img{
       
   
     }
-    
-    .child {
+    /*child element formats the boxes*/
+    .work-box {
       display: inline-block;
       border-radius: 10px;
+      border: 3px solid var(--background-color);
+      box-shadow: 20px 20px 10px grey;
       padding: 20px;
       margin: 12px;
       position:relative;
@@ -130,8 +133,8 @@ img{
       
    
       }
-    
-    .child:first-child {
+    /*first child element larger size*/
+      .work-box:first-child {
       width: 100%;
       background-image: url(../images/code-1076536__340.jpg);
       height: 600px;
@@ -141,33 +144,34 @@ img{
           
 
     }
-    
-   .child:not(:first-child) {
+    /*makes dimensions of all other boxes*/
+   .work-box:not(:first-child) {
       flex: 1 1 40%;
       height: 300px;
    
-
+    /*put images in the boxes*/
     }
-    .child:nth-child(2){
+    .work-box:nth-child(2){
       background-image: url(../images/computer-2788918_960_720.jpg);
     }
 
-    .child:nth-child(3){
+    .work-box:nth-child(3){
       background-image: url(../images/programmer-7633812__340.webp);
     }
 
-    .child:nth-child(4){
+    .work-box:nth-child(4){
       background-image: url(../images/istockphoto-537331500-170667a.jpg);
     }
 
-    .child:nth-child(5){
+    .work-box:nth-child(5){
       background-image: url(../images/coding-courses-800x449\ \(1\).png);
     }
 
-
-    .child:hover{
+    /* change opacity on mouse over*/
+    .work-box:hover{
       opacity: var(--opacity);
     }
+    /*formats text on bottom right*/
     .header-h1-work{
 
       background-color: azure;
@@ -181,7 +185,7 @@ img{
       bottom:10px;
       left:10px;
      }
-
+     /*set up line break in image text*/
   .break{
     display: block;
     font-size: 15px;
@@ -207,51 +211,30 @@ img{
         display: block;
         font-size: 15px;
       }
-    /* change size of images as screen gets smaller also changes to flex column in sub work and footer*/
-    @media screen and (max-width: 1360px) {
-      
-      .sub-work-img{
-        width: 500px;
-      }
-    }
-
+    /* change size of images as screen gets smaller also changes to flex column in my work and footer*/
     @media screen and (max-width: 992px)
     {
-      .main-img{
-        height: 450px;
-      }  
- 
-      .sub-work-img{
-        width:400px;
+      .banner-img{
+        height: 300px;
       }
     }
 
       @media screen and (max-width: 768px) {
-        .sub-work
-       
-        {
-          flex-direction: column;
-                   
-        }
+
         footer ul{
           flex-direction: column;
           text-align: center;
         }
-        .main-img{
-
-          max-height: 300px;
-        }
-
-        .sub-work-img{
-          width:450px;
-        }
         .banner-img{
           height:200px;
         }
-        .child{
-          max-height: 300px;
+        .work-box:first-child{
+          max-height: 400px;
         }
-        .container1{
+        .work-box:not(:first-child){
+          min-height: 250px;
+        }
+        .container-work{
           flex-direction: column;
          
         }
