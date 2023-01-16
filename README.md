@@ -8,4 +8,4 @@ The user can navigate to sections of the webpage by clicking the links in the to
 ![](./assets/images/screenshot-mod-2.png)
 # Link to webpage
 
-[module-2-portfolio](https://michaeloc1.github.io/module-1-portfolio/)
+[module-2-portfolio](https://michaeloc1.github.io/module-2-portfolio/)
